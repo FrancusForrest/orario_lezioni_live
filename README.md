@@ -1,5 +1,5 @@
 # Orario lezioni LIVE
-Script per filtrare le proprie lezioni LIVE rivolto agli studenti di Ingegneria - UniBg.
+Script per filtrare le lezioni LIVE, rivolto agli studenti di Ingegneria - UniBg.
 
 
 ### Tool necessari da installare
