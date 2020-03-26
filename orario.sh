@@ -62,7 +62,7 @@ while read f1 f2 f3 f4 f5 f6 f7 f8 f9 f10
 do
 	for r in ${riga_file_conf[@]}
 	do 
-		if [[ $(( codici_materie[$r] )) == $f5 ]]; then 	
+		if [[ "$f5" == *${codici_materie[$r]}* || "$f6" == *${codici_materie[$r]}* ]]; then 	
 		echo "======================================================================================================="  >> $FILE_LEZIONI_FILTRATE
 		echo "Informazioni cronologiche : $f1" >> $FILE_LEZIONI_FILTRATE
 		echo "Info non rilevanti : $f2" >> $FILE_LEZIONI_FILTRATE
@@ -77,7 +77,7 @@ do
 		echo ""  >> $FILE_LEZIONI_FILTRATE
 
 		# Scrivo file per le lezioni del giorno attuale 
-		if [[ $DATA_OGGI ==  $f7 ]]; then
+		if [[ $DATA_OGGI ==  $f7 || $DATA_OGGI ==  $f8  ]]; then
 			echo "======================================================================================================="  >> $FILE_LEZIONI_OGGI
 			echo "Informazioni cronologiche : $f1" >> $FILE_LEZIONI_OGGI
 			echo "Info non rilevanti : $f2" >> $FILE_LEZIONI_OGGI
@@ -93,6 +93,8 @@ do
 		fi
 		fi
 	done
+
+	#echo "$f5"
 	
 done < ./orario/orario.csv
 
