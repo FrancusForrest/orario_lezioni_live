@@ -3,24 +3,28 @@ Script per filtrare le lezioni LIVE, rivolto agli studenti di Ingegneria - UniBg
 
 
 ### Tool necessari da installare
-Utilizzato per la conversione .txt a .pdf .
 ```shell
-sudo apt-get install cups-filters
+sudo apt install gnumeric
+sudo apt install cups-filters
 ```
-### Utilizzo 
+### Utilizzo
 **1)** Aggiungere **SOLO un codice per riga** per ogni corso, nel file config.conf .<br>
 Esempio:<br>
 Se il corso di Analisi 1 corrisponde al codice : 21090 <br>
 Se il corso di Fisica corrsiponde al codice : 21011
 <br>
-Apro il file config.conf, e incollerò **SOLO** : <br>
+Il file config.conf risulterà : <br>
 ```text
 21090
 21011
 ```
-Salvo il file e lo chiudo. 
 <br><br>
-**2)** Apri la shell e vai alla directory dove si trova il file, e digita :
+**2)** Rendere eseguibile lo script :
+```text
+chmod +x orario.sh
+```
+<br><br>
+**3)** Eseguire lo script :
 ```text
 ./orario.sh
 ```
