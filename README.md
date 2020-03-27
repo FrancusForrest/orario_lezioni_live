@@ -18,12 +18,12 @@ Il file config.conf risulterà : <br>
 21090
 21011
 ```
-<br><br>
+<br>
 **2)** Rendere eseguibile lo script :
 ```text
 chmod +x orario.sh
 ```
-<br><br>
+<br>
 **3)** Eseguire lo script :
 ```text
 ./orario.sh
