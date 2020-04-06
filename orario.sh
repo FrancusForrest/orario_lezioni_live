@@ -18,7 +18,9 @@ fi
 
 # Scarico file 
 echo "========== Scarico il file aggiornato =========="
-wget --no-check-certificate --output-document=./orario/orario.csv 'https://docs.google.com/spreadsheets/d/1OeVJ688pmtfMRGlFJIySo1CiJSwv4cymvBi71VJG9DY/export?gid=0&format=csv'
+wwget --no-check-certificate --output-document=./orario/orario.xlsx 'https://docs.google.com/spreadsheets/d/1OeVJ688pmtfMRGlFJIySo1CiJSwv4cymvBi71VJG9DY/export?gid=0&format=xlsx'
+echo "========== Converto xlsx to csv =========="
+ssconvert ./orario/orario.xlsx ./orario/orario.csvget --no-check-certificate --output-document=./orario/orario.csv 'https://docs.google.com/spreadsheets/d/1OeVJ688pmtfMRGlFJIySo1CiJSwv4cymvBi71VJG9DY/export?gid=0&format=csv'
 
 # Check se il file orario_filtrato.txt esiste già
 if [[ -f "$FILE_LEZIONI_FILTRATE" ]];then
